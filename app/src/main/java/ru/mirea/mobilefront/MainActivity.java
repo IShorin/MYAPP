@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         passwordField = (EditText) findViewById(R.id.password_text);
         loginButton = (AppCompatButton) findViewById(R.id.login_button);
 
-        gifImageView = findViewById(R.id.gif_load_image);
+        //gifImageView = findViewById(R.id.gif_load_image);
         gifImageView.setVisibility(View.INVISIBLE);//тут гифка становиться не видмой
         blink_anim = AnimationUtils.loadAnimation(this, R.anim.blink_anim);
 
