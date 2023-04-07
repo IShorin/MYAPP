@@ -4,7 +4,7 @@
     android:layout_width="150dp"
     android:layout_height="270dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/light_brown_square"
+    android:background="@drawable/light_blue_square"
     app:layout_constraintCircleRadius="50dp">
 
     <ImageView

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/log_back_gradient"
+    android:background="@drawable/background_all"
     tools:context=".fragments.SearchFragment">
 
 
@@ -12,12 +12,7 @@
 
 
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/log_back_gradient"
-        android:alpha="0.6"
-        app:tint="@color/white" />
+
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -27,7 +22,7 @@
         android:layout_marginTop="52dp"
         android:alpha="1"
 
-        android:background="@drawable/light_brown_square"
+        android:background="@drawable/light_blue_square"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
@@ -230,7 +225,7 @@
         android:layout_height="54dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
-        android:background="@drawable/light_brown_square"
+        android:background="@drawable/light_blue_square"
         android:fontFamily="@font/allerta"
 
         android:gravity="center"

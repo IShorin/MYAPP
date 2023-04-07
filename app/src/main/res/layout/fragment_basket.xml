@@ -19,7 +19,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:background="@drawable/light_brown_square"
+            android:background="@drawable/light_blue_square"
             android:paddingStart="15dp"
             android:paddingTop="10dp"
             android:paddingBottom="15dp"
@@ -64,7 +64,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="32dp"
 
-            android:background="@drawable/light_brown_square"
+            android:background="@drawable/light_blue_square"
             android:paddingStart="10dp"
             android:paddingTop="10dp"
 
@@ -82,7 +82,7 @@
             android:layout_width="150dp"
             android:layout_height="0dp"
             android:layout_marginEnd="16dp"
-            android:background="@drawable/light_brown_square"
+            android:background="@drawable/light_blue_square"
             android:backgroundTint="@color/grey_yellow"
             android:text="Перейти к оплате"
             android:textSize="15sp"

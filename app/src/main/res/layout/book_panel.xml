@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="160dp"
-    android:background="@drawable/light_brown_square">
+    android:background="@drawable/light_blue_square">
 
     <ImageView
         android:id="@+id/book_panel_image"

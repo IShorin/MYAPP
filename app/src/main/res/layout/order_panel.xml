@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/light_brown_square">
+    android:background="@drawable/light_blue_square">
 
     <TextView
         android:id="@+id/order_date_text"
