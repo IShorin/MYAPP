@@ -8,23 +8,16 @@
     tools:context=".fragments.SearchFragment">
 
 
-
-
-
-
-
-
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="360dp"
-        android:layout_height="227dp"
-        android:layout_marginTop="52dp"
+        android:layout_width="378dp"
+        android:layout_height="645dp"
+        android:layout_marginTop="40dp"
         android:alpha="1"
 
         android:background="@drawable/light_blue_square"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -39,17 +32,16 @@
             android:padding="1.1mm"
             android:src="@drawable/human_100"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-           />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/username_interface"
             android:layout_width="0dp"
             android:layout_height="86dp"
             android:layout_marginStart="16dp"
-            android:gravity="center"
             android:layout_marginTop="1dp"
             android:layout_marginEnd="16dp"
+            android:gravity="center"
             android:padding="12dp"
             android:text="@string/non_auth_text"
             android:textAlignment="center"
@@ -60,11 +52,229 @@
             app:layout_constraintStart_toEndOf="@+id/imageView2"
             app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/edit_phone_button5"
+            android:layout_width="42dp"
+            android:layout_height="41dp"
+            android:layout_marginBottom="184dp"
+            android:background="@drawable/ripple_btn"
+            android:fontFamily="@font/allerta"
+            android:gravity="center"
+
+            android:paddingTop="8dp"
+            app:backgroundTint="@null"
+            app:icon="@drawable/plus_24"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconTint="#FFFFFF"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/address_text2"
+            app:layout_constraintHorizontal_bias="0.192"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phone_text5"
+            app:layout_constraintVertical_bias="0.634"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/edit_phone_button4"
+            android:layout_width="42dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/ripple_btn"
+            android:fontFamily="@font/allerta"
+
+            android:gravity="center"
+            android:paddingTop="8dp"
+            app:backgroundTint="@null"
+            app:icon="@drawable/minus_24"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+
+            app:iconTint="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/address_text2"
+            app:layout_constraintHorizontal_bias="0.833"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phone_text5"
+            app:layout_constraintVertical_bias="0.201"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/edit_phone_button3"
+            android:layout_width="42dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/ripple_btn"
+            android:fontFamily="@font/allerta"
+
+            android:gravity="center"
+            android:paddingTop="8dp"
+            app:backgroundTint="@null"
+            app:icon="@drawable/minus_24"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+
+            app:iconTint="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/address_text"
+            app:layout_constraintHorizontal_bias="0.833"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phone_text5"
+            app:layout_constraintVertical_bias="0.019"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/edit_phone_button2"
+            android:layout_width="42dp"
+            android:layout_height="41dp"
+            android:layout_marginBottom="184dp"
+            android:background="@drawable/ripple_btn"
+            android:fontFamily="@font/allerta"
+            android:gravity="center"
+
+            android:paddingTop="8dp"
+            app:backgroundTint="@null"
+            app:icon="@drawable/plus_24"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconTint="#FFFFFF"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/address_text"
+            app:layout_constraintHorizontal_bias="0.192"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phone_text5"
+            app:layout_constraintVertical_bias="0.125"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/phone_text"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center_vertical|start"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="156dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/blue_square"
+            android:gravity="center_vertical|start"
+            android:paddingStart="10dp"
+
+            android:text="Почта:"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/edit_phone_button"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/phone_text5"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center_vertical|start"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="204dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/blue_square"
+            android:gravity="center_vertical|start"
+            android:paddingStart="10dp"
+
+            android:text="Пароль:"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/edit_phone_button"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/phone_text6"
+            android:layout_width="256dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical|start"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/blue_square"
+            android:gravity="center_vertical|start"
+
+            android:paddingStart="10dp"
+            android:text="Задача 1"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.142"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/address_text3"
+            tools:ignore="RtlCompat" />
+
+        <TextView
+            android:id="@+id/phone_text7"
+            android:layout_width="256dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical|start"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/blue_square"
+            android:gravity="center_vertical|start"
+
+            android:paddingStart="10dp"
+            android:text="Задача 2"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/phone_text8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.145"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phone_text6"
+            app:layout_constraintVertical_bias="0.437"
+            tools:ignore="RtlCompat" />
+
+        <TextView
+            android:id="@+id/phone_text8"
+            android:layout_width="256dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical|start"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/blue_square"
+            android:gravity="center_vertical|start"
+
+            android:paddingStart="10dp"
+            android:text="Задача 3"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.145"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phone_text6"
+            app:layout_constraintVertical_bias="0.472"
+            tools:ignore="RtlCompat" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/edit_phone_button1"
+            android:layout_width="42dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/blue_square"
+            android:fontFamily="@font/allerta"
+            android:gravity="center"
+            app:backgroundTint="@null"
+            app:icon="@drawable/edit_image"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconTint="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.571"
+            app:layout_constraintStart_toEndOf="@+id/phone_text5"
+            app:layout_constraintTop_toBottomOf="@+id/edit_phone_button"
+            app:layout_constraintVertical_bias="0.035"
+            tools:ignore="TouchTargetSizeCheck" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/edit_phone_button"
             android:layout_width="42dp"
             android:layout_height="41dp"
-            android:background="@drawable/black_brown_square"
+            android:background="@drawable/blue_square"
 
             android:fontFamily="@font/allerta"
             android:gravity="center"
@@ -79,167 +289,132 @@
             app:layout_constraintBottom_toBottomOf="@+id/phone_text"
             app:layout_constraintEnd_toEndOf="@+id/username_interface"
             app:layout_constraintTop_toTopOf="@+id/phone_text"
-            tools:ignore="TouchTargetSizeCheck" />
-
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/edit_address_button"
-            android:layout_width="42dp"
-            android:layout_height="41dp"
-            android:background="@drawable/black_brown_square"
-
-            android:fontFamily="@font/allerta"
-            android:gravity="center"
-
-            app:backgroundTint="@null"
-            app:icon="@drawable/edit_image"
-            app:iconGravity="textStart"
-            app:iconPadding="0dp"
-
-
-            app:iconTint="#FFFFFF"
-
-            app:layout_constraintBottom_toBottomOf="@+id/address_text"
-            app:layout_constraintEnd_toEndOf="@+id/edit_phone_button"
-            app:layout_constraintStart_toStartOf="@+id/edit_phone_button"
-            app:layout_constraintTop_toTopOf="@+id/address_text"
+            app:layout_constraintVertical_bias="0.8"
             tools:ignore="TouchTargetSizeCheck" />
 
         <TextView
-            android:id="@+id/phone_text"
+            android:id="@+id/phone_text3"
             android:layout_width="0dp"
             android:layout_height="36dp"
             android:layout_gravity="center_vertical|start"
             android:layout_marginStart="12dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="64dp"
             android:layout_marginEnd="12dp"
             android:gravity="center_vertical|start"
-            android:text="Телефон"
+            android:text="Фамилия: enter text"
             android:textColor="@color/white"
             app:layout_constraintEnd_toStartOf="@+id/edit_phone_button"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/phone_text2"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center_vertical|start"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="12dp"
+            android:gravity="center_vertical|start"
+            android:text="Имя: enter text"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/edit_phone_button"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/phone_text4"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center_vertical|start"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="108dp"
+            android:layout_marginEnd="12dp"
+            android:gravity="center_vertical|start"
+            android:text="Отчество: enter text"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/edit_phone_button"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
         <TextView
             android:id="@+id/address_text"
-            android:layout_width="0dp"
-            android:layout_height="36dp"
+            android:layout_width="96dp"
+            android:layout_height="32dp"
             android:layout_gravity="center_vertical|start"
             android:layout_marginStart="12dp"
-            android:layout_marginTop="16dp"
             android:layout_marginBottom="24dp"
             android:gravity="center_vertical|start"
-            android:text="Адрес"
+            android:text="Компетенции:"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/phone_text"
+            app:layout_constraintHorizontal_bias="0.537"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/phone_text" />
-
-        <EditText
-            android:id="@+id/edit_phone_text"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_gravity="center_vertical|start"
-            android:ems="10"
-            android:gravity="center_vertical|start"
-            android:hint="Введите новый телефон"
-            android:inputType="textPersonName|phone"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="14sp"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="@+id/phone_text"
-            app:layout_constraintEnd_toEndOf="@+id/phone_text"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/phone_text"
-            app:layout_constraintTop_toTopOf="@+id/phone_text"
-            app:layout_constraintVertical_bias="0.0"
-            tools:ignore="TouchTargetSizeCheck"
-            tools:visibility="invisible" />
-
-        <EditText
-            android:id="@+id/edit_address_text"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_gravity="center_vertical|start"
-            android:ems="10"
-            android:gravity="center_vertical|start"
-            android:hint="Введите новый адрес"
-            android:inputType="textPostalAddress"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="14sp"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="@+id/address_text"
-            app:layout_constraintEnd_toEndOf="@+id/address_text"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/address_text"
-            app:layout_constraintTop_toTopOf="@+id/address_text"
-            app:layout_constraintVertical_bias="1.0"
-            tools:ignore="TouchTargetSizeCheck"
-            tools:visibility="invisible" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="360dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:alpha="1"
-        android:background="@drawable/ripple_srch"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+            app:layout_constraintTop_toBottomOf="@+id/phone_text5"
+            app:layout_constraintVertical_bias="0.074" />
 
         <TextView
-            android:id="@+id/block_title_orders"
-            android:layout_width="162dp"
-            android:layout_height="29dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:gravity="fill|center"
-            android:text="Бонусная карта"
+            android:id="@+id/address_text2"
+            android:layout_width="96dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_vertical|start"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center_vertical|start"
+            android:text="Позиции:"
             android:textColor="@color/white"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.042"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/phone_text"
+            app:layout_constraintHorizontal_bias="0.537"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/phone_text5"
+            app:layout_constraintVertical_bias="0.225" />
 
-        <include
-            layout="@layout/bonus_card"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+        <TextView
+            android:id="@+id/address_text3"
+            android:layout_width="96dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_vertical|start"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center_vertical|start"
+            android:text="Задачи:"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/phone_text"
+            app:layout_constraintHorizontal_bias="0.014"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phone_text5"
+            app:layout_constraintVertical_bias="0.381" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/logout_button"
+            android:layout_width="56dp"
+            android:layout_height="54dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/light_blue_square"
+
+            android:fontFamily="@font/allerta"
+
+            android:gravity="center"
+            android:padding="1.1mm"
+            app:backgroundTint="@null"
+
+
+            app:icon="@drawable/logout_32"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconTint="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.95"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/block_title_orders" />
+            tools:ignore="SpeakableTextPresentCheck" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/logout_button"
-        android:layout_width="56dp"
-        android:layout_height="54dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/light_blue_square"
-        android:fontFamily="@font/allerta"
-
-        android:gravity="center"
-
-        app:backgroundTint="@null"
-        app:icon="@drawable/logout_32"
-        android:padding="1.1mm"
-
-
-        app:iconGravity="textStart"
-        app:iconPadding="0dp"
-        app:iconTint="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
