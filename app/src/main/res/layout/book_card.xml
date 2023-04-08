@@ -26,16 +26,17 @@
         app:layout_constraintVertical_bias="0.202" />
 
     <TextView
-        android:id="@+id/book_card_name2"
-        android:layout_width="171dp"
-        android:layout_height="20dp"
-        android:gravity="start"
+        android:id="@+id/book_card_name"
+        android:layout_width="150dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
+        android:rotation="25"
 
-        android:text="Приоритет"
-        android:textColor="@color/black"
-
+        android:text="Название книги"
+        android:textColor="@color/grey_yellow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.007"
