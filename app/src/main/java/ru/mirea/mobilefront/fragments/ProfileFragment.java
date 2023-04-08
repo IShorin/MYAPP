@@ -66,10 +66,11 @@ public class ProfileFragment extends Fragment {
         username = (TextView) view.findViewById(R.id.username_interface);
         phoneText = (TextView) view.findViewById(R.id.phone_text);
         addressText = (TextView) view.findViewById(R.id.address_text);
-        editAddressButton = (MaterialButton) view.findViewById(R.id.edit_address_button);
+        //editAddressButton = (MaterialButton) view.findViewById(R.id.edit_address_button); поля изминения атрибутов,
+        // я их удалил, добавь пожалуйста заново с теми же id
         editPhoneButton = (MaterialButton) view.findViewById(R.id.edit_phone_button);
-        editAddressText = (EditText) view.findViewById(R.id.edit_address_text);
-        editPhoneText = (EditText) view.findViewById(R.id.edit_phone_text);
+        //editAddressText = (EditText) view.findViewById(R.id.edit_address_text);
+        //editPhoneText = (EditText) view.findViewById(R.id.edit_phone_text);
 
         level = view.findViewById(R.id.bonus_progression);
         bonus = view.findViewById(R.id.bonus_amount);
@@ -142,29 +143,29 @@ public class ProfileFragment extends Fragment {
 
         }
 
-        CardService.getBonusCard().observe(getViewLifecycleOwner(), new Observer<CardDto>() {
+        CardService.getBonusCard().observe(getViewLifecycleOwner(), new Observer<CardDto>() {//функционал карточек удалять не стал, но врятли он понадобиться
             @Override
             public void onChanged(CardDto cardDto) {
                 int userSpent = 0; //Прописать логику подсчет трат юзера
                 bonus.setText(String.valueOf(cardDto.getBonus()));
                 switch (cardDto.getPower()){
                     case 6: {
-                        image.setImageResource(R.drawable.cashback_silver);
+                        //image.setImageResource(R.drawable.cashback_silver);
                         level.setText(userSpent+"/20 000");
                         break;
                     }
                     case 9: {
-                        image.setImageResource(R.drawable.cashback_gold);
+                       // image.setImageResource(R.drawable.cashback_gold);
                         level.setText(userSpent+"/30 000");
                         break;
                     }
                     case 12: {
-                        image.setImageResource(R.drawable.cashback_platinum);
+                        //image.setImageResource(R.drawable.cashback_platinum);
                         level.setText(userSpent+"/40 000");
                         break;
                     }
                     case 15: {
-                        image.setImageResource(R.drawable.cashback_brilliant);
+                       // image.setImageResource(R.drawable.cashback_brilliant);
                         level.setText("Максимум!");
                         break;
                     }

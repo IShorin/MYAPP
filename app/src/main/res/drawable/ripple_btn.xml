@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
     android:color="@color/green">
-    <item android:drawable="@drawable/white_square"/>
+    <item android:drawable="@drawable/green_btn_square"/>
 
     <item android:id="@android:id/mask">
         <shape android:shape="rectangle">
