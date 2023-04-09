@@ -4,7 +4,7 @@
     android:layout_width="300dp"
     android:layout_height="80dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/green_square"
+    android:background="@drawable/alpha_square"
     app:layout_constraintCircleRadius="30dp">
 
     <TextView
@@ -25,24 +25,24 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.202" />
 
+
     <TextView
-        android:id="@+id/book_card_name"
-        android:layout_width="150dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
+        android:id="@+id/book_card_name2"
+        android:layout_width="170dp"
+        android:layout_height="20dp"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
-        android:rotation="25"
+        android:text="Приоритет"
 
-        android:text="Название книги"
-        android:textColor="@color/grey_yellow"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.007"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.733" />
+        app:layout_constraintVertical_bias="0.741" />
 
     <TextView
         android:id="@+id/book_card_name3"

@@ -69,7 +69,7 @@ public class BookViewAdapter extends RecyclerView.Adapter<BookViewAdapter.BookVi
             super(itemView);
 
             bookName = itemView.findViewById(R.id.book_card_name);
-            bookImage = itemView.findViewById(R.id.book_card_image);
+            //bookImage = itemView.findViewById(R.id.book_card_image);
 
 
         }

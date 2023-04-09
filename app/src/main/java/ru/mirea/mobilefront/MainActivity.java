@@ -50,8 +50,8 @@ public class MainActivity extends AppCompatActivity {
         loginButton = (AppCompatButton) findViewById(R.id.login_button);
 
         //gifImageView = findViewById(R.id.gif_load_image);
-        gifImageView.setVisibility(View.INVISIBLE);//тут гифка становиться не видмой
-        blink_anim = AnimationUtils.loadAnimation(this, R.anim.blink_anim);
+//        gifImageView.setVisibility(View.INVISIBLE);//тут гифка становиться не видм
+//   blink_anim = AnimationUtils.loadAnimation(this, R.anim.blink_anim);
 
 
 //        loginButton.setOnTouchListener(new View.OnTouchListener() {
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                                 , passwordField.getText().toString());
 
 
-                        gifImageView.setVisibility(View.VISIBLE);//тут видмой
+//                        gifImageView.setVisibility(View.VISIBLE);//тут видмой
                         //  Здесь врубается кнопка логина, загрузочка все такое ее надо будет вырубить
                         //  через секунд 10 в случае безуспешности логина и все такое
                         //Старт анимации!!!
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
                     errorTextLogin.setVisibility(View.INVISIBLE);
                     userService.getUserData(userToken);
                     Log.d("auth", "login success");
-                    gifImageView.setVisibility(View.INVISIBLE);//тут не видмой
+                    //gifImageView.setVisibility(View.INVISIBLE);//тут не видмой
                     //Конец анимации
                     startActivity(intent);
                 } catch (Exception e){
