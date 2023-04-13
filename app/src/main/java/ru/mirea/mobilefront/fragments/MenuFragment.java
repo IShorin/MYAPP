@@ -46,31 +46,5 @@ public class MenuFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        finalText = view.findViewById(R.id.final_oder_text);
-        orderView = view.findViewById(R.id.order_list_view);
-        manager = getParentFragmentManager();
-        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this.getContext(), RecyclerView.VERTICAL);
-        Drawable d = ResourcesCompat.getDrawable(this.getResources(), R.drawable.divider_vertical_res, null);
-        dividerItemDecoration.setDrawable(d);
-        orderView.addItemDecoration(dividerItemDecoration);
-
-        RecyclerView.LayoutManager layoutManager = new
-                LinearLayoutManager(view.getContext()
-                ,RecyclerView.VERTICAL
-                ,false);
-        orderView.setLayoutManager(layoutManager);
-        //Заполнение списка
-        MutableLiveData<List<OrderDto>> orderData= OrderService.getOrderData();
-        orderData.observe(getViewLifecycleOwner(), new Observer<List<OrderDto>>() {
-            @Override
-            public void onChanged(List<OrderDto> orderDtos) {
-                OrderViewAdapter adapter = new OrderViewAdapter(view.getContext(), orderDtos);
-                orderView.setAdapter(adapter);
-                finalText.setText("Всего вы сделали заказов на "+ OrderService.getOrdersSum()+" рублей. Спасибо!");
-            }
-        });
-
-        //обновить данные заказов
-        OrderService.getOrders();
     }
 }

@@ -38,18 +38,5 @@ public class OrderDialogFragment extends BottomSheetDialogFragment {
     }
 
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        LinearLayout container = view.findViewById(R.id.final_list_order);
-        TextView finalPrice = view.findViewById(R.id.order_price_text);
-        Map<String, Integer> bookMap = OrderService.getOrderData().getValue().get(position).getBookList();
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            bookMap.forEach((name, amount) ->{
-                TextView textView = new TextView(view.getContext());
-                textView.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-                textView.setText(amount + " x " + name);
-                textView.setTextColor(Color.BLACK);
-                container.addView(textView);
-            });
-            finalPrice.setText(OrderService.getOrderData().getValue().get(position).getFullPrice()+" ₽");
-        }
     }
 }

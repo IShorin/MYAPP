@@ -77,22 +77,6 @@ public class MenuActivity extends FragmentActivity {
                 tabLayout.selectTab(tabLayout.getTabAt(position));
             }
         });
-
-
-        BookService.getCurrentChosenBook().observe(this, new Observer<BookFull>() {
-            @Override
-            public void onChanged(BookFull bookFull) {
-                FullBookDialogFragment fullBookDialogFragment = FullBookDialogFragment.newInstance();
-                fullBookDialogFragment.show(getSupportFragmentManager(), bookFull.getBookName());
-            }
-        });
-    }
-
-
-
-
-    public static BottomSheetBehavior<View> getStaticBottomSheetBehavior(){
-        return staticBottomSheetBehavior;
     }
 
 

@@ -44,48 +44,6 @@ public class BasketFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        paymentButton = view.findViewById(R.id.procced_to_paymnt_button);
-
-        basketFinalPrice = view.findViewById(R.id.final_basket_price);
-        backgroundTint = view.findViewById(R.id.basket_tint_image);
-        backgroundTint.setTranslationZ(-1f);
-        basketView = view.findViewById(R.id.basket_books_view);
-        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this.getContext(), RecyclerView.VERTICAL);
-        Drawable d = ResourcesCompat.getDrawable(this.getResources(), R.drawable.divider_vertical_res, null);
-        dividerItemDecoration.setDrawable(d);
-        basketView.addItemDecoration(dividerItemDecoration);
-
-        RecyclerView.LayoutManager layoutManager = new
-                LinearLayoutManager(view.getContext()
-                ,RecyclerView.VERTICAL
-                ,false);
-        basketView.setLayoutManager(layoutManager);
-
-        BookVerticalBasketViewAdapter adapter = new BookVerticalBasketViewAdapter(view.getContext(), null);
-
-        BasketService.getBasketBookList().observe(getViewLifecycleOwner(), new Observer<HashMap<BookFull, Integer>>() {
-            @SuppressLint("SetTextI18n")
-            @Override
-            public void onChanged(HashMap<BookFull, Integer> bookFulls) {
-                adapter.setBookList(bookFulls);
-                basketView.setAdapter(adapter);
-
-                basketFinalPrice.setText("Итоговая стоимость вашей корзины: "+ BasketService.getFinalCost()+" руб");
-
-
-            }
-        });
-        //Панель оплаты
-        paymentButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (!BasketService.getBasketBookList().getValue().isEmpty()){
-                    PaymentDialogFragment paymentDialogFragment = PaymentDialogFragment.newInstance();
-                    //fill dialog
-                    paymentDialogFragment.show(getParentFragmentManager(), "bottom_payment");
-                }
-            }
-        });
     }
 
 

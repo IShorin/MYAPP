@@ -1,5 +1,7 @@
 package ru.mirea.mobilefront.adapter;
 
+import android.util.Log;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -21,6 +23,7 @@ public class MyFragmentAdapter extends FragmentStateAdapter {
     @NonNull
     @Override
     public Fragment createFragment(int position) {
+        Log.d("Fragment for pos"+ position, "debug");
         switch (position){
                 case 0:
                     return new BookFragment();

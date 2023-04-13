@@ -39,41 +39,6 @@ public class SearchFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        //Новые книги, заполнение витрины
-        searchBooksView = view.findViewById(R.id.book_search_view);
-        searchBookList = BookService.getSearchBookList();
-
-        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this.getContext(), RecyclerView.VERTICAL);
-        Drawable d = ResourcesCompat.getDrawable(this.getResources(), R.drawable.divider_vertical_res, null);
-        dividerItemDecoration.setDrawable(d);
-        searchBooksView.addItemDecoration(dividerItemDecoration);
-
-        RecyclerView.LayoutManager layoutManager = new
-                LinearLayoutManager(view.getContext()
-                ,RecyclerView.VERTICAL
-                ,false);
-        searchBooksView.setLayoutManager(layoutManager);
-
-        searchBookList.observe(getViewLifecycleOwner(), new Observer<List<BookSimple>>() {
-            @Override
-            public void onChanged(List<BookSimple> booksFound) {
-                //for (BookSimple book: bookSimples) System.out.println(book.toString());
-                BookVerticalViewAdapter adapter = new BookVerticalViewAdapter(view.getContext(), booksFound);
-                searchBooksView.setAdapter(adapter);
-            }
-        });
-
-        Button searchButton = (Button) view.findViewById(R.id.book_search_button);
-        EditText bookSearch = (EditText) view.findViewById(R.id.book_search_text);
-
-        searchButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                    bookService.searchForBook(bookSearch.getText().toString());
-            }
-        });
-
-
 
     }
 }
