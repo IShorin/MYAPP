@@ -11,19 +11,20 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
-import androidx.lifecycle.Observer;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.tabs.TabLayout;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import ru.mirea.mobilefront.adapter.MyFragmentAdapter;
 import ru.mirea.mobilefront.dto.BookFull;
-import ru.mirea.mobilefront.fragments.FullBookDialogFragment;
-import ru.mirea.mobilefront.service.BasketService;
-import ru.mirea.mobilefront.service.BookService;
+import ru.mirea.mobilefront.model.PriorityName;
+import ru.mirea.mobilefront.model.Task;
+import ru.mirea.mobilefront.service.TaskService;
 
 public class MenuActivity extends FragmentActivity {
 
@@ -41,7 +42,16 @@ public class MenuActivity extends FragmentActivity {
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        BasketService.getBasketBookList().postValue(new HashMap<BookFull, Integer>());
+        {
+            List<Task> taskList = new ArrayList<>();
+            Task task1 = new Task();
+            task1.setDescription("12.05.2023");
+            task1.setName("Сделать наброски");
+            task1.setPriorityName(PriorityName.HIGH);
+            taskList.add(task1);
+            TaskService.getTaskMutableLiveData().postValue(taskList);
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
         tabLayout=findViewById(R.id.tabLayout);

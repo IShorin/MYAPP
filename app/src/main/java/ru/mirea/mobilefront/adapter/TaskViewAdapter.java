@@ -1,32 +1,27 @@
 package ru.mirea.mobilefront.adapter;
 
-import android.app.Dialog;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.squareup.picasso.Picasso;
-
 import java.util.List;
 
 import ru.mirea.mobilefront.R;
-import ru.mirea.mobilefront.dto.BookSimple;
-import ru.mirea.mobilefront.service.BookService;
+import ru.mirea.mobilefront.model.Task;
 
-public class BookViewAdapter extends RecyclerView.Adapter<BookViewAdapter.BookViewHolder> {
+public class TaskViewAdapter extends RecyclerView.Adapter<TaskViewAdapter.BookViewHolder> {
 
     Context context;
-    List<BookSimple> bookList;
+    List<Task> taskList;
 
-    public BookViewAdapter(Context context, List<BookSimple> bookList) {
+    public TaskViewAdapter(Context context, List<Task> taskList) {
         this.context = context;
-        this.bookList = bookList;
+        this.taskList = taskList;
     }
 
     @NonNull
@@ -38,38 +33,36 @@ public class BookViewAdapter extends RecyclerView.Adapter<BookViewAdapter.BookVi
 
     @Override
     public void onBindViewHolder(@NonNull BookViewHolder holder, int position) {
-        BookSimple book = bookList.get(position);
-        holder.bookName.setText(book.getName());
-        Picasso.get()
-                .load(book.getImageUrl())
-                .placeholder(R.drawable.book_100)
-                .error(R.drawable.book_100)
-                .into(holder.bookImage);
-        // image from picasso
+        Task task = taskList.get(position);
+        holder.taskName.setText(task.getName());
+        holder.taskDeadline.setText(task.getDescription());
+        holder.taskPriority.setText(task.getPriorityName().toString());
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String bookSrc = bookList.get(position).getUrl();
-                BookService.getFullBookData(bookSrc);
+                //Обработчик говна
             }
         });
     }
 
     @Override
     public int getItemCount() {
-        return bookList.size();
+        return taskList.size();
     }
 
     public static final class BookViewHolder extends RecyclerView.ViewHolder{
 
-        TextView bookName;
-        ImageView bookImage;
+        TextView taskName;
+        TextView taskPriority;
+        TextView taskDeadline;
 
         public BookViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            bookName = itemView.findViewById(R.id.book_card_name);
-            //bookImage = itemView.findViewById(R.id.book_card_image);
+            taskName = itemView.findViewById(R.id.book_card_name);
+            taskPriority = itemView.findViewById(R.id.book_card_name2);
+            taskDeadline = itemView.findViewById(R.id.book_card_name3);
 
 
         }
