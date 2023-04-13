@@ -143,10 +143,10 @@
 
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/address_text"
-            app:layout_constraintHorizontal_bias="0.192"
+            app:layout_constraintHorizontal_bias="0.207"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/phone_text5"
-            app:layout_constraintVertical_bias="0.125"
+            app:layout_constraintVertical_bias="0.107"
             tools:ignore="TouchTargetSizeCheck" />
 
         <TextView
@@ -161,7 +161,7 @@
             android:gravity="center_vertical|start"
             android:paddingStart="10dp"
 
-            android:text="Почта:"
+            android:text="ishorin@bibs.com"
             android:textColor="@color/white"
             app:layout_constraintEnd_toStartOf="@+id/edit_phone_button"
             app:layout_constraintHorizontal_bias="1.0"
@@ -180,7 +180,7 @@
             android:gravity="center_vertical|start"
             android:paddingStart="10dp"
 
-            android:text="Пароль:"
+            android:text="**********"
             android:textColor="@color/white"
             app:layout_constraintEnd_toStartOf="@+id/edit_phone_button"
             app:layout_constraintHorizontal_bias="1.0"
@@ -301,7 +301,7 @@
             android:layout_marginTop="64dp"
             android:layout_marginEnd="12dp"
             android:gravity="center_vertical|start"
-            android:text="Фамилия: enter text"
+            android:text="Бобович"
             android:textColor="@color/white"
             app:layout_constraintEnd_toStartOf="@+id/edit_phone_button"
             app:layout_constraintHorizontal_bias="1.0"
@@ -317,7 +317,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="12dp"
             android:gravity="center_vertical|start"
-            android:text="Имя: enter text"
+            android:text="Боб"
             android:textColor="@color/white"
             app:layout_constraintEnd_toStartOf="@+id/edit_phone_button"
             app:layout_constraintHorizontal_bias="1.0"
@@ -333,7 +333,7 @@
             android:layout_marginTop="108dp"
             android:layout_marginEnd="12dp"
             android:gravity="center_vertical|start"
-            android:text="Отчество: enter text"
+            android:text="Бобов"
             android:textColor="@color/white"
             app:layout_constraintEnd_toStartOf="@+id/edit_phone_button"
             app:layout_constraintHorizontal_bias="1.0"
@@ -358,9 +358,28 @@
             app:layout_constraintVertical_bias="0.074" />
 
         <TextView
-            android:id="@+id/address_text2"
+            android:id="@+id/address_text4"
             android:layout_width="96dp"
             android:layout_height="32dp"
+            android:layout_gravity="center_vertical|start"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/log_back_round"
+            android:gravity="center_vertical|start"
+            android:text="Blender"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.134"
+            app:layout_constraintStart_toEndOf="@+id/address_text"
+            app:layout_constraintTop_toBottomOf="@+id/phone_text5"
+            app:layout_constraintVertical_bias="0.076"
+            tools:ignore="RtlCompat" />
+
+        <TextView
+            android:id="@+id/address_text2"
+            android:layout_width="75dp"
+            android:layout_height="33dp"
             android:layout_gravity="center_vertical|start"
             android:layout_marginStart="12dp"
             android:layout_marginBottom="24dp"
@@ -369,10 +388,29 @@
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/phone_text"
-            app:layout_constraintHorizontal_bias="0.537"
+            app:layout_constraintHorizontal_bias="0.484"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/phone_text5"
-            app:layout_constraintVertical_bias="0.225" />
+            app:layout_constraintVertical_bias="0.226" />
+
+        <TextView
+            android:id="@+id/address_text5"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical|start"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/green_square"
+            android:gravity="center_vertical|start"
+            android:text="3d artist"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/address_text2"
+            app:layout_constraintTop_toBottomOf="@+id/address_text4"
+            app:layout_constraintVertical_bias="0.033"
+            tools:ignore="RtlCompat" />
 
         <TextView
             android:id="@+id/address_text3"

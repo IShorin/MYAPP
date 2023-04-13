@@ -3,47 +3,159 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="160dp"
-    android:background="@drawable/light_blue_square">
+    android:layout_height="700dp"
+    android:background="@drawable/light_blue_square"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
 
-    <ImageView
-        android:id="@+id/book_panel_image"
-        android:layout_width="138dp"
-        android:layout_height="140dp"
+    <TextView
+        android:id="@+id/surename_book_panel_id"
+        android:layout_width="104dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center_vertical|start"
+        android:gravity="center_vertical|start"
+        android:text="Бобов"
+        android:textColor="@color/white"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.079" />
+
+    <TextView
+        android:id="@+id/father_book_panel_id"
+        android:layout_width="104dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center_vertical|start"
+        android:gravity="center_vertical|start"
+        android:text="Бобович"
+        android:textColor="@color/white"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.127" />
+
+    <TextView
+        android:id="@+id/name_book_panel_id"
+        android:layout_width="104dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center_vertical|start"
+        android:gravity="center_vertical|start"
+        android:text="Боб"
+        android:textColor="@color/white"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <TextView
+        android:id="@+id/phone_text5"
+        android:layout_width="143dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center_vertical|start"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
+        android:background="@drawable/green_square"
+        android:gravity="center_vertical|start"
+
+        android:paddingStart="10dp"
+        android:text="**********"
+
+
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.022"
+        app:layout_constraintStart_toEndOf="@+id/father_book_panel_id"
+        app:layout_constraintTop_toBottomOf="@+id/phone_text"
+        app:layout_constraintVertical_bias="0.011" />
+
+    <TextView
+        android:id="@+id/phone_text"
+        android:layout_width="141dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical|start"
+        android:background="@drawable/green_square"
+        android:gravity="center_vertical|start"
+        android:paddingStart="10dp"
+
+        android:text="ishorin@bibs.com"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toEndOf="@+id/name_book_panel_id"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024" />
+
+    <TextView
+        android:id="@+id/address_text"
+        android:layout_width="96dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center_vertical|start"
+        android:layout_marginStart="16dp"
+        android:gravity="center_vertical|start"
+        android:text="Компетенции:"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/book_100" />
+        app:layout_constraintVertical_bias="0.179" />
 
     <TextView
-        android:id="@+id/book_panel_name"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="12dp"
-        android:text="Название"
-        android:textColor="@color/grey_yellow"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/book_panel_author"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/book_panel_image"
-        app:layout_constraintTop_toTopOf="@+id/book_panel_image" />
+        android:id="@+id/address_text2"
+        android:layout_width="75dp"
+        android:layout_height="33dp"
+        android:layout_gravity="center_vertical|start"
+        android:layout_marginStart="16dp"
+        android:gravity="center_vertical|start"
+        android:text="Позиции:"
+
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.244" />
 
     <TextView
-        android:id="@+id/book_panel_author"
-        android:layout_width="0dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="12dp"
-        android:text="Автор"
-        android:textColor="@color/grey_yellow"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/book_panel_image"
+        android:id="@+id/address_text4"
+        android:layout_width="96dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center_vertical|start"
+        android:background="@drawable/log_back_round"
+        android:gravity="center_vertical|start"
+        android:text="Blender"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/book_panel_image"
-        app:layout_constraintTop_toBottomOf="@+id/book_panel_name" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintHorizontal_bias="0.039"
+        app:layout_constraintStart_toEndOf="@+id/address_text"
+        tools:ignore="MissingConstraints,RtlCompat"
+        tools:layout_editor_absoluteY="120dp" />
+
+    <TextView
+        android:id="@+id/address_text5"
+        android:layout_width="85dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_vertical|start"
+        android:background="@drawable/green_square"
+        android:gravity="center_vertical|start"
+        android:text="3d artist"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.029"
+        app:layout_constraintStart_toEndOf="@+id/address_text2"
+        tools:ignore="MissingConstraints,RtlCompat"
+        tools:layout_editor_absoluteY="166dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>

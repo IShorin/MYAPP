@@ -1,6 +1,7 @@
 package ru.mirea.mobilefront.fragments;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -67,6 +68,23 @@ public class BookFragment extends Fragment {
                 newTasks.setLayoutManager(layoutManager);
             }
         });
+    }
+    private boolean isFirstFragmentVisible = false;
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        if (isVisibleToUser && !isFirstFragmentVisible) {
+            isFirstFragmentVisible = true;
+
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    // Выполняем здесь инициализацию фрагмента
+                    // Например, загрузка данных, настройка RecyclerView и т.д.
+                }
+            }, 200); // Установите задержку в миллисекундах здесь
+        }
     }
 
 

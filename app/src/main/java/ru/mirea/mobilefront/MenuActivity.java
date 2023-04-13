@@ -1,22 +1,26 @@
 package ru.mirea.mobilefront;
 
+import android.app.DatePickerDialog;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 
@@ -37,6 +41,9 @@ public class MenuActivity extends FragmentActivity {
       private EditText num_btn;
       private Button closeFullBookButton;
 //    private static final int NUM_PAGES=5;
+
+
+
 
 
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -112,4 +119,7 @@ public class MenuActivity extends FragmentActivity {
             viewPager2.setCurrentItem(0, true);
         }
     }
+
+
+
 }
