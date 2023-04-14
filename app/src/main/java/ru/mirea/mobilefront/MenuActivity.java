@@ -1,31 +1,25 @@
 package ru.mirea.mobilefront;
 
-import android.app.DatePickerDialog;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.HashMap;
 import java.util.List;
 
 import ru.mirea.mobilefront.adapter.MyFragmentAdapter;
-import ru.mirea.mobilefront.dto.BookFull;
 import ru.mirea.mobilefront.model.PriorityName;
 import ru.mirea.mobilefront.model.Task;
 import ru.mirea.mobilefront.service.TaskService;
@@ -52,7 +46,7 @@ public class MenuActivity extends FragmentActivity {
         {
             List<Task> taskList = new ArrayList<>();
             Task task1 = new Task();
-            task1.setDescription("12.05.2023");
+            task1.setDeadLine("12.05.2023");
             task1.setName("Сделать наброски");
             task1.setPriorityName(PriorityName.HIGH);
             taskList.add(task1);

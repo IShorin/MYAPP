@@ -11,6 +11,19 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Task {
     String name;
-    String description;
+    String deadLine;
+    String startLine;
+    String employee;
     PriorityName priorityName;
+
+    @Override
+    public String toString() {
+        return "Task{" +
+                "name='" + name + '\'' +
+                ", deadLine='" + deadLine + '\'' +
+                ", startLine='" + startLine + '\'' +
+                ", employee='" + employee + '\'' +
+                ", priorityName=" + priorityName +
+                '}';
+    }
 }

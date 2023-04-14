@@ -15,7 +15,7 @@
         android:gravity="start"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
-
+        android:textAlignment="center"
         android:text="Название задачи"
         android:textColor="@color/black"
 
@@ -24,31 +24,53 @@
         app:layout_constraintHorizontal_bias="0.142"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.101" />
+        app:layout_constraintVertical_bias="0.101"
+        tools:ignore="RtlCompat" />
 
     <TextView
         android:id="@+id/book_card_name2"
-        android:layout_width="170dp"
-        android:layout_height="20dp"
-        android:paddingStart="16dp"
+        android:layout_width="92dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="16dp"
+
+        android:background="@drawable/green_square"
+
         android:paddingEnd="16dp"
         android:text="Приоритет"
+        android:paddingStart="12dp"
+        android:gravity="center"
 
-        android:textAlignment="textStart"
+
         android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/book_card_name4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/book_card_name"
+        app:layout_constraintVertical_bias="0.333" />
+
+    <TextView
+        android:id="@+id/employee_assign_task"
+        android:layout_width="221dp"
+        android:layout_height="21dp"
+        android:gravity="start"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+
+        android:text="Кому назначена"
+        android:textColor="@color/black"
+
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.066"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/book_card_name2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.45" />
+        app:layout_constraintVertical_bias="0.474" />
 
     <TextView
-        android:id="@+id/book_card_name3"
+        android:id="@+id/deadline_date"
         android:layout_width="141dp"
         android:layout_height="22dp"
-        android:gravity="end"
+        android:gravity="center"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
 
@@ -57,16 +79,16 @@
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.548"
+        app:layout_constraintHorizontal_bias="0.94"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.81" />
+        app:layout_constraintVertical_bias="0.879" />
 
     <TextView
         android:id="@+id/book_card_name4"
         android:layout_width="132dp"
         android:layout_height="22dp"
-        android:gravity="start"
+        android:gravity="center"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
 
@@ -75,9 +97,9 @@
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintHorizontal_bias="0.437"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.81" />
+        app:layout_constraintVertical_bias="0.879" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -34,9 +34,13 @@ public class SearchViewAdapter extends RecyclerView.Adapter<SearchViewAdapter.Bo
     @Override
     public void onBindViewHolder(@NonNull BookViewHolder holder, int position) {
         Task task = taskList.get(position);
+
         holder.taskName.setText(task.getName());
-        holder.taskDeadline.setText(task.getDescription());
         holder.taskPriority.setText(task.getPriorityName().toString());
+
+
+
+
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,14 +59,18 @@ public class SearchViewAdapter extends RecyclerView.Adapter<SearchViewAdapter.Bo
 
         TextView taskName;
         TextView taskPriority;
-        TextView taskDeadline;
+
+
+
+
 
         public BookViewHolder(@NonNull View itemView) {
             super(itemView);
 
             taskName = itemView.findViewById(R.id.book_card_name);
             taskPriority = itemView.findViewById(R.id.book_card_name2);
-            taskDeadline = itemView.findViewById(R.id.book_card_name3);
+
+
 
 
         }

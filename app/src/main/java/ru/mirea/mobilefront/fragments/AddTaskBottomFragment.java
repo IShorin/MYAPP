@@ -179,18 +179,26 @@ public class AddTaskBottomFragment extends BottomSheetDialogFragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         Button button = view.findViewById(R.id.add_task_button);
         EditText name = view.findViewById(R.id.task_name_text);
-
-
-
         TextView prior = view.findViewById(R.id.task_priority_text);
-        // EditText dl = view.findViewById(R.id.task_deadline_text);
+
+
+        TextView deadLineText = view.findViewById(R.id.deadline_date);
+        TextView startLineText = view.findViewById(R.id.startline_date);
+        TextView employeeText = view.findViewById(R.id.employee_assign_text);
+
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Task task = new Task();
+
                 task.setName(name.getText().toString());
                 task.setPriorityName(PriorityName.valueOf(prior.getText().toString()));
-                //task.setDescription(dl.getText().toString());
+
+                task.setDeadLine(deadLineText.getText().toString());
+                task.setStartLine(startLineText.getText().toString());
+                task.setEmployee(employeeText.getText().toString());
+
                 List<Task> taskList = TaskService.getTaskMutableLiveData().getValue();
                 assert taskList != null;
                 taskList.add(task);
@@ -200,3 +208,4 @@ public class AddTaskBottomFragment extends BottomSheetDialogFragment {
         });
     }
 }
+

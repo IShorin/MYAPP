@@ -35,8 +35,12 @@ public class TaskViewAdapter extends RecyclerView.Adapter<TaskViewAdapter.BookVi
     public void onBindViewHolder(@NonNull BookViewHolder holder, int position) {
         Task task = taskList.get(position);
         holder.taskName.setText(task.getName());
-        holder.taskDeadline.setText(task.getDescription());
+
         holder.taskPriority.setText(task.getPriorityName().toString());
+
+        holder.taskStartline.setText(task.getStartLine());
+        holder.taskDeadline.setText(task.getDeadLine());
+        holder.taskEmployee.setText(task.getEmployee());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,15 +59,21 @@ public class TaskViewAdapter extends RecyclerView.Adapter<TaskViewAdapter.BookVi
 
         TextView taskName;
         TextView taskPriority;
+
+
+        TextView taskStartline;
         TextView taskDeadline;
+        TextView taskEmployee;
 
         public BookViewHolder(@NonNull View itemView) {
             super(itemView);
 
             taskName = itemView.findViewById(R.id.book_card_name);
             taskPriority = itemView.findViewById(R.id.book_card_name2);
-            taskDeadline = itemView.findViewById(R.id.book_card_name3);
 
+            taskDeadline = itemView.findViewById(R.id.deadline_date);
+            taskStartline = itemView.findViewById(R.id.book_card_name4);
+            taskEmployee = itemView.findViewById(R.id.employee_assign_task);
 
         }
     }
