@@ -1,5 +1,7 @@
 package ru.mirea.mobilefront.model;
 
+import java.util.List;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,11 +11,11 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Task {
+public class Employee {
     String name;
-    String deadLine;
-    String startLine;
-    String employee;
-    PriorityName priorityName;
+    String surename;
+    String fathername;
+    String email;
+    String coefEff;
 
 }

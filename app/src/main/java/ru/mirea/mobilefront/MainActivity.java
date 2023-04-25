@@ -20,6 +20,7 @@ import java.util.Calendar;
 
 import pl.droidsonroids.gif.GifImageView;
 import ru.mirea.mobilefront.service.AuthService;
+import ru.mirea.mobilefront.service.EmployeeService;
 import ru.mirea.mobilefront.service.UserService;
 
 public class MainActivity extends AppCompatActivity {
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        EmployeeService.podgon();
         //Intent intent = new Intent(this, MenuActivity.class);
         //startActivity(intent);
 

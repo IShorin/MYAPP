@@ -144,7 +144,7 @@ public class AddTaskBottomFragment extends BottomSheetDialogFragment {
             }
 
         });
-        String[] items = {"БОБ БОБОВИЧ БОБОВ", "ИВАН ИВАНОВИЧ ИВАНОВ", "АНДРЕЙ АНДРЕЕВИЧ АНДРЕЕВ"};
+        String[] items = {"НЕ НАЗНАЧЕН","БОБ БОБОВИЧ БОБОВ", "ИВАН ИВАНОВИЧ ИВАНОВ"};
         int[] images = {R.drawable.person_24, R.drawable.person_24, R.drawable.person_24};
         Spinner spinner_person = view.findViewById(R.id.my_spinner2);
         CustomSpinnerAdapter adapter_custom = new CustomSpinnerAdapter(getContext(), items, images);

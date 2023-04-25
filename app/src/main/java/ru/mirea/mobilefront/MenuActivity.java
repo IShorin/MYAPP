@@ -45,11 +45,7 @@ public class MenuActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         {
             List<Task> taskList = new ArrayList<>();
-            Task task1 = new Task();
-            task1.setDeadLine("12.05.2023");
-            task1.setName("Сделать наброски");
-            task1.setPriorityName(PriorityName.HIGH);
-            taskList.add(task1);
+
             TaskService.getTaskMutableLiveData().postValue(taskList);
         }
 
